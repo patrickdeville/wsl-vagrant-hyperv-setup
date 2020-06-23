@@ -19,7 +19,7 @@ I would only recommend this approach as a means to launch a "readonly" environme
 
 1. Hyper-V networking cannot be configured via Vagrant
 
-    Vagrant cannot setup networking rules on the Hyper-V swith.
+    Vagrant cannot setup networking rules on the Hyper-V switch.
     For example, the following is commonly used with VirtualBox but *will not work* with Hyper-V:
 
     ```sh
@@ -81,13 +81,13 @@ I would only recommend this approach as a means to launch a "readonly" environme
     export VAGRANT_DEFAULT_PROVIDER="hyperv"
     ```
 
-2. Installing Vagrant
+2. Installing Vagrant (2.2.9 on 2020-06-22)
 
     Vagrant must be installed within the Linux distribution used with WSL and from the official Vagrant repository.
 
     ```sh
     # https://www.vagrantup.com/downloads.html
-    vagrant_url="https://releases.hashicorp.com/vagrant/2.2.5/vagrant_2.2.5_x86_64.deb"
+    vagrant_url="https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb"
     vagrant_filename="$(basename "$vagrant_url")"
     wget "$vagrant_url"
     sudo dpkg -i "$vagrant_filename"
